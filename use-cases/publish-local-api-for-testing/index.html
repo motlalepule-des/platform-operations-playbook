@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../expose-sql-server-from-private-network/">
+      
+      
+        <link rel="next" href="../troubleshoot-remote-sql-connection/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>Use Case: Publish Local API for External Testing - Platform Runbooks</title>
+        <title>Publish Local API for Testing - Platform Runbooks</title>
       
     
     
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Use Case: Publish Local API for External Testing
+              Publish Local API for Testing
             
           </span>
         </div>
@@ -222,8 +226,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -234,13 +240,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -261,7 +265,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -315,6 +319,436 @@
     
   
     External SQL Data Sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expose-sql-server-from-private-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expose SQL Server from Private Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publish Local API for Testing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publish Local API for Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps (ngrok)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps (ngrok)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install ngrok
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-authenticate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Authenticate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-your-local-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Start Your Local API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Start Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-share-public-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Share Public URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-dev-tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps (Dev Tunnels)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps (Dev Tunnels)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-dev-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a Dev Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-your-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Start Your API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-access-the-tunnel-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Access the Tunnel URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-share-with-testers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Share with Testers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-testing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; Testing Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification &amp; Testing Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-tunnel-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Tunnel is Active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitor-api-traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor API Traffic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-with-external-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test with External Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-headers-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Headers &amp; Auth
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Refused
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunnel-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tunnel Won't Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-access-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Access Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot-remote-sql-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshoot Remote SQL Connection
   
 
     
@@ -1093,6 +1527,272 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Steps (ngrok)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install ngrok
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-authenticate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Authenticate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-your-local-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Start Your Local API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Start Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-share-public-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Share Public URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-dev-tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps (Dev Tunnels)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps (Dev Tunnels)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-dev-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a Dev Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-your-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Start Your API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-access-the-tunnel-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Access the Tunnel URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-share-with-testers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Share with Testers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-testing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; Testing Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification &amp; Testing Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-tunnel-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Tunnel is Active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitor-api-traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor API Traffic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-with-external-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test with External Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-headers-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Headers &amp; Auth
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Refused
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunnel-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tunnel Won't Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-access-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Access Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1114,21 +1814,176 @@
 
 <h1 id="use-case-publish-local-api-for-external-testing">Use Case: Publish Local API for External Testing</h1>
 <h2 id="scenario">Scenario</h2>
-<p>A developer needs to expose a locally running API so external systems can test integration.</p>
+<p>A developer needs to expose a locally running API so external systems can test integration with real-time changes during development.</p>
 <p>Example:</p>
-<p>Local ASP.NET API running on port 5000.</p>
+<p>Local ASP.NET API running on <code>http://localhost:5000</code> needs to be accessible to external testers or third-party integrations.</p>
 <h2 id="solution">Solution</h2>
-<p>Use a tunneling tool such as:</p>
+<p>Use a tunneling tool to create a secure, publicly accessible URL:</p>
 <ul>
-<li>ngrok</li>
-<li>Dev Tunnels</li>
+<li><strong>ngrok</strong> - Simple, reliable tunneling with custom domains</li>
+<li><strong>Dev Tunnels</strong> - Microsoft's built-in tunneling for Visual Studio</li>
 </ul>
 <h2 id="steps-ngrok">Steps (ngrok)</h2>
+<h3 id="1-install-ngrok">1. Install ngrok</h3>
+<p>Download from <a href="https://ngrok.com">ngrok.com</a> or use package manager:</p>
+<pre><code class="language-powershell"># Using Chocolatey on Windows
+choco install ngrok
+
+# Or download binary and add to PATH
+</code></pre>
+<h3 id="2-authenticate">2. Authenticate</h3>
+<p>Get your authtoken from <a href="https://dashboard.ngrok.com">ngrok dashboard</a>.</p>
+<pre><code class="language-powershell">ngrok config add-authtoken &lt;your-authtoken&gt;
+</code></pre>
+<h3 id="3-start-your-local-api">3. Start Your Local API</h3>
+<p>Ensure your API is running:</p>
+<pre><code class="language-powershell"># Example: ASP.NET Core API
+dotnet run --urls=http://localhost:5000
+</code></pre>
+<h3 id="4-start-tunnel">4. Start Tunnel</h3>
+<pre><code class="language-powershell">ngrok http 5000 --host-header=rewrite
+</code></pre>
+<p>Output will show:</p>
+<pre><code>Session Status          online
+Account                 your-email@example.com
+Version                 3.x.x
+Region                  us (United States)
+Forwarding              https://abcd-1234-5678.ngrok.io -&gt; http://localhost:5000
+</code></pre>
+<p>Your API is now accessible at: <code>https://abcd-1234-5678.ngrok.io</code></p>
+<p>For detailed information about the <code>--host-header=rewrite</code> flag and other ngrok options, see <a href="../../tools/ngrok/setup-ngrok-http-tunnel.md">Setup ngrok HTTP Tunnel</a>.</p>
+<h3 id="5-share-public-url">5. Share Public URL</h3>
+<p>Share the forwarding URL with external testers. They can access your local API without additional setup.</p>
+<hr />
+<h2 id="steps-dev-tunnels">Steps (Dev Tunnels)</h2>
+<p>Dev Tunnels is Microsoft's native tunneling solution, integrated with Visual Studio.</p>
+<h3 id="1-prerequisites">1. Prerequisites</h3>
+<ul>
+<li>Visual Studio 2022 (Update 7 or later)</li>
+<li>Signed in to Microsoft Account</li>
+</ul>
+<h3 id="2-create-a-dev-tunnel">2. Create a Dev Tunnel</h3>
+<p>In Visual Studio:</p>
 <ol>
-<li>Install ngrok</li>
-<li>Authenticate using ngrok token</li>
-<li>Start tunnel:</li>
+<li>Click the <strong>Run</strong> dropdown → <strong>Create Tunnel...</strong></li>
+<li>Select tunnel type: <strong>Temporary</strong> or <strong>Persistent</strong></li>
+<li>Enter a name for your tunnel</li>
 </ol>
+<h3 id="3-start-your-api">3. Start Your API</h3>
+<p>Run your application normally in Visual Studio:</p>
+<pre><code class="language-powershell"># If using command line
+dotnet run --urls=http://localhost:5000
+</code></pre>
+<h3 id="4-access-the-tunnel-url">4. Access the Tunnel URL</h3>
+<p>Visual Studio displays a tunnel URL:</p>
+<pre><code>https://your-tunnel-name-abcdef.devtunnels.ms
+</code></pre>
+<p>Alternative method using CLI:</p>
+<pre><code class="language-powershell">devtunnel create --name my-api
+devtunnel port create -p 5000
+devtunnel host
+</code></pre>
+<h3 id="5-share-with-testers">5. Share with Testers</h3>
+<p>Share the tunnel URL. External systems can connect without knowing your local IP or machine.</p>
+<hr />
+<h2 id="verification-testing-steps">Verification &amp; Testing Steps</h2>
+<h3 id="verify-tunnel-is-active">Verify Tunnel is Active</h3>
+<pre><code class="language-powershell"># Test endpoint from local machine
+Invoke-WebRequest -Uri &quot;http://localhost:5000/api/health&quot; -Verbose
+
+# Test endpoint from public URL
+Invoke-WebRequest -Uri &quot;https://your-tunnel-url/api/health&quot; -Verbose
+</code></pre>
+<h3 id="monitor-api-traffic">Monitor API Traffic</h3>
+<p><strong>ngrok</strong>: Web dashboard at <code>http://localhost:4040</code></p>
+<pre><code>Requests | Response Code | Method | Path | Duration
+</code></pre>
+<p><strong>Dev Tunnels</strong>: Monitor in Visual Studio Output window</p>
+<h3 id="test-with-external-tools">Test with External Tools</h3>
+<p>Use Postman, cURL, or your test runner to hit the public URL:</p>
+<pre><code class="language-bash">curl -X GET https://your-tunnel-url/api/health
+curl -X POST https://your-tunnel-url/api/users \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;name&quot;:&quot;John&quot;,&quot;email&quot;:&quot;john@example.com&quot;}'
+</code></pre>
+<h3 id="verify-headers-auth">Verify Headers &amp; Auth</h3>
+<p>Ensure proper headers are passed through the tunnel:</p>
+<pre><code class="language-powershell">$headers = @{
+    &quot;Authorization&quot; = &quot;Bearer token123&quot;
+    &quot;Content-Type&quot; = &quot;application/json&quot;
+}
+
+Invoke-WebRequest `
+  -Uri &quot;https://your-tunnel-url/api/data&quot; `
+  -Headers $headers `
+  -Method GET
+</code></pre>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Why</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use HTTPS only</td>
+<td>Tunnels use HTTPS to encrypt traffic</td>
+<td>Verify URL starts with <code>https://</code></td>
+</tr>
+<tr>
+<td>Rotate auth tokens</td>
+<td>Prevent unauthorized access</td>
+<td>Change ngrok/Dev Tunnel tokens monthly</td>
+</tr>
+<tr>
+<td>Monitor activity</td>
+<td>Detect suspicious requests</td>
+<td>Check ngrok dashboard or logs</td>
+</tr>
+<tr>
+<td>Use temporary URLs</td>
+<td>Limit exposure duration</td>
+<td>Use ngrok temp tunnels or Dev Tunnels sessions</td>
+</tr>
+<tr>
+<td>Disable when done</td>
+<td>Stop unintended access</td>
+<td>Stop tunnel process after testing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="connection-refused">Connection Refused</h3>
+<p>Ensure your local API is running and listening on the correct port:</p>
+<pre><code class="language-powershell"># Check if port is listening
+netstat -an | Select-String 5000
+</code></pre>
+<h3 id="tunnel-wont-start">Tunnel Won't Start</h3>
+<pre><code class="language-powershell"># Check for port conflicts
+Get-Process | Where-Object {$_.Id -eq (Get-NetTCPConnection -LocalPort 5000).OwningProcess}
+
+# Restart ngrok or dev tunnel
+# Kill previous process and start fresh
+</code></pre>
+<h3 id="external-access-fails">External Access Fails</h3>
+<ul>
+<li>Verify firewall isn't blocking localhost</li>
+<li>Confirm tunnel URL is correct</li>
+<li>Check API logs for request details</li>
+<li>Test with <code>curl</code> from another machine</li>
+</ul>
+<hr />
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../../tools/ngrok/setup-ngrok-http-tunnel/">Setup ngrok HTTP Tunnel</a></li>
+<li><a href="../../tools/dev-tunnels/setup-dev-tunnels/">Setup Dev Tunnels</a></li>
+<li><a href="../../infrastructure/virtual-machines/expose-sql-server-from-vm/">Expose SQL Server from VM</a></li>
+</ul>
 
 
 

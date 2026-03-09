@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#setup-ngrok-http-tunnel" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -314,6 +319,90 @@
     
   
     External SQL Data Sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use-cases/expose-sql-server-from-private-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expose SQL Server from Private Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use-cases/publish-local-api-for-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publish Local API for Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use-cases/troubleshoot-remote-sql-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshoot Remote SQL Connection
   
 
     
@@ -985,6 +1074,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ngrok Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1002,6 +1111,508 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Chocolatey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-direct-download" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Direct Download
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-scoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Scoop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-your-auth-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Your Auth Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure ngrok
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-http-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start HTTP Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#host-header-rewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Host Header Rewrite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host Header Rewrite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-without-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Without It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-with-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution With It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-you-need-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When You Need It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-its-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When It's Optional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Domain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-subdomain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Subdomain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Tunnels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring &amp; Debugging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring &amp; Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-inspection-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Inspection Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command Line Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aspnet-core-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASP.NET Core API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-express-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js Express API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-flask-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Flask API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Refused
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunnel-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tunnel Won't Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-access-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Access Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slow-response-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Response Times
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1060,6 +1671,499 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Chocolatey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-direct-download" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Direct Download
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-scoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Scoop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-your-auth-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Your Auth Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure ngrok
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-http-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start HTTP Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#host-header-rewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Host Header Rewrite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host Header Rewrite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-without-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Without It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-with-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution With It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-you-need-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When You Need It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-its-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When It's Optional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Domain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-subdomain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Subdomain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Tunnels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring &amp; Debugging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring &amp; Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-inspection-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Inspection Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command Line Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aspnet-core-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASP.NET Core API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-express-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js Express API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-flask-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Flask API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Refused
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunnel-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tunnel Won't Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-access-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Access Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slow-response-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Response Times
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1076,9 +2180,265 @@
 
 
 
-  <h1>ngrok Setup</h1>
+<h1 id="setup-ngrok-http-tunnel">Setup ngrok HTTP Tunnel</h1>
+<p>ngrok is a command-line application that exposes local ports to the internet via secure tunnels. This guide covers installation, configuration, and best practices.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="windows">Windows</h3>
+<h4 id="option-1-chocolatey">Option 1: Chocolatey</h4>
+<pre><code class="language-powershell">choco install ngrok
+</code></pre>
+<h4 id="option-2-direct-download">Option 2: Direct Download</h4>
+<ol>
+<li>Download from <a href="https://ngrok.com/download">ngrok.com</a></li>
+<li>Extract the executable</li>
+<li>Add to PATH or run directly</li>
+</ol>
+<h4 id="option-3-scoop">Option 3: Scoop</h4>
+<pre><code class="language-powershell">scoop install ngrok
+</code></pre>
+<h3 id="mac">Mac</h3>
+<pre><code class="language-bash">brew install ngrok
+</code></pre>
+<h3 id="linux">Linux</h3>
+<pre><code class="language-bash">curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc &gt;/dev/null &amp;&amp; echo &quot;deb https://ngrok-agent.s3.amazonaws.com buster main&quot; | sudo tee /etc/apt/sources.list.d/ngrok.list &amp;&amp; sudo apt update &amp;&amp; sudo apt install ngrok
+</code></pre>
+<h2 id="authentication">Authentication</h2>
+<h3 id="get-your-auth-token">Get Your Auth Token</h3>
+<ol>
+<li>Sign up at <a href="https://ngrok.com">ngrok.com</a></li>
+<li>Go to <a href="https://dashboard.ngrok.com/get-started/your-authtoken">Dashboard</a></li>
+<li>Copy your authtoken</li>
+</ol>
+<h3 id="configure-ngrok">Configure ngrok</h3>
+<pre><code class="language-powershell">ngrok config add-authtoken &lt;your-authtoken&gt;
+</code></pre>
+<p>This stores the token in <code>~/.ngrok2/ngrok.yml</code> for future use.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="start-http-tunnel">Start HTTP Tunnel</h3>
+<pre><code class="language-powershell">ngrok http 8080
+</code></pre>
+<p>Output:</p>
+<pre><code>ngrok                                                                 (Ctrl+C to quit)
 
+Session Status                online
+Account                       user@example.com
+Version                       3.x.x
+Region                        us (United States)
+Forwarding                    https://1234-5678-abcd.ngrok.io -&gt; http://localhost:8080
+Forwarding                    http://1234-5678-abcd.ngrok.io -&gt; http://localhost:8080
+</code></pre>
+<h2 id="advanced-options">Advanced Options</h2>
+<h3 id="host-header-rewrite">Host Header Rewrite</h3>
+<p>The <code>--host-header=rewrite</code> flag is <strong>critical</strong> for most APIs.</p>
+<h4 id="problem-without-it">Problem Without It</h4>
+<p>When a request comes through the tunnel:
+- External URL: <code>https://1234-5678-abcd.ngrok.io</code>
+- Request header shows <code>Host: 1234-5678-abcd.ngrok.io</code>
+- Your API expects <code>Host: localhost</code> or a specific domain
+- Header validation fails → <strong>API rejects the request</strong></p>
+<h4 id="solution-with-it">Solution With It</h4>
+<pre><code class="language-powershell">ngrok http 8080 --host-header=rewrite
+</code></pre>
+<p>How it works:
+- External request arrives with public Host header
+- ngrok intercepts and rewrites to <code>Host: localhost:8080</code>
+- Your API receives the expected header
+- Request succeeds ✓</p>
+<h4 id="when-you-need-it">When You Need It</h4>
+<ul>
+<li><strong>ASP.NET Core APIs</strong> with host validation</li>
+<li><strong>APIs checking origin headers</strong> (CORS, WebSocket)</li>
+<li><strong>Session cookies</strong> tied to specific hosts</li>
+<li><strong>APIs with security policies</strong> validating Host headers</li>
+</ul>
+<h4 id="when-its-optional">When It's Optional</h4>
+<ul>
+<li>REST APIs without host validation</li>
+<li>Stateless microservices</li>
+<li>APIs accepting any origin</li>
+</ul>
+<p><strong>Recommendation:</strong> Always use <code>--host-header=rewrite</code> unless you have a specific reason not to.</p>
+<h3 id="custom-domain">Custom Domain</h3>
+<p>Use a paid ngrok account to reserve custom domains:</p>
+<pre><code class="language-powershell">ngrok http 8080 --domain=myapi.ngrok.io
+</code></pre>
+<h3 id="custom-subdomain">Custom Subdomain</h3>
+<pre><code class="language-powershell">ngrok http 8080 --subdomain=myapi
+</code></pre>
+<p>Results in: <code>https://myapi.ngrok.io</code></p>
+<h3 id="basic-authentication">Basic Authentication</h3>
+<p>Add password protection:</p>
+<pre><code class="language-powershell">ngrok http 8080 --basic-auth=user:password
+</code></pre>
+<p>Testers must provide credentials:</p>
+<pre><code class="language-powershell">curl -u user:password https://myapi.ngrok.io/api/data
+</code></pre>
+<h3 id="custom-headers">Custom Headers</h3>
+<p>Add headers to tunneled requests:</p>
+<pre><code class="language-powershell">ngrok http 8080 --request-header-add &quot;X-Custom-Header: value&quot;
+</code></pre>
+<h3 id="region-selection">Region Selection</h3>
+<p>Choose closer region for lower latency:</p>
+<pre><code class="language-powershell"># List available regions
+ngrok http --help | grep region
 
+# Use specific region
+ngrok http 8080 --region=eu
+</code></pre>
+<p>Available regions: <code>us</code>, <code>eu</code>, <code>au</code>, <code>ap</code>, <code>jp</code>, <code>in</code>, <code>sa</code></p>
+<h3 id="multiple-tunnels">Multiple Tunnels</h3>
+<p>Start ngrok with config file for multiple tunnels:</p>
+<p><strong>~/.ngrok2/ngrok.yml:</strong></p>
+<pre><code class="language-yaml">authtoken: your-token
+tunnels:
+  api:
+    proto: http
+    addr: 8080
+    host_header: rewrite
+  web:
+    proto: http
+    addr: 3000
+    host_header: rewrite
+</code></pre>
+<p>Run all:</p>
+<pre><code class="language-powershell">ngrok start --all
+</code></pre>
+<p>Run specific:</p>
+<pre><code class="language-powershell">ngrok start api
+</code></pre>
+<h2 id="monitoring-debugging">Monitoring &amp; Debugging</h2>
+<h3 id="web-inspection-interface">Web Inspection Interface</h3>
+<p>ngrok provides a local web dashboard at <code>http://127.0.0.1:4040</code></p>
+<p>View:
+- All HTTP requests/responses
+- Request headers and body
+- Response code and latency
+- Real-time traffic monitoring</p>
+<h3 id="command-line-inspection">Command Line Inspection</h3>
+<pre><code class="language-powershell"># View all tunnels
+ngrok tunnels list
+
+# View session details
+ngrok config list
+</code></pre>
+<h3 id="logs">Logs</h3>
+<pre><code class="language-powershell"># View logs
+ngrok config list
+
+# Log file location
+# Windows: %AppData%/ngrok/ngrok.log
+# Mac/Linux: ~/.ngrok2/ngrok.log
+</code></pre>
+<h2 id="complete-examples">Complete Examples</h2>
+<h3 id="aspnet-core-api">ASP.NET Core API</h3>
+<pre><code class="language-powershell"># Terminal 1: Start API
+dotnet run --urls=http://localhost:5000
+
+# Terminal 2: Start tunnel
+ngrok http 5000 --host-header=rewrite
+
+# Share: https://1234-5678-abcd.ngrok.io
+</code></pre>
+<h3 id="nodejs-express-api">Node.js Express API</h3>
+<pre><code class="language-powershell"># Terminal 1: Start API
+npm start  # Runs on port 3000
+
+# Terminal 2: Start tunnel
+ngrok http 3000 --host-header=rewrite
+
+# Share: https://1234-5678-abcd.ngrok.io
+</code></pre>
+<h3 id="python-flask-api">Python Flask API</h3>
+<pre><code class="language-powershell"># Terminal 1: Start API
+python app.py  # Runs on port 5000
+
+# Terminal 2: Start tunnel
+ngrok http 5000 --host-header=rewrite --basic-auth=admin:password
+
+# Share with authentication: https://admin:password@1234-5678-abcd.ngrok.io
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Why</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Always use <code>--host-header=rewrite</code></strong></td>
+<td>Prevents host validation errors</td>
+<td>Add to every command</td>
+</tr>
+<tr>
+<td><strong>Protect sensitive APIs</strong></td>
+<td>Prevent unauthorized access</td>
+<td>Use <code>--basic-auth</code> or IP whitelist</td>
+</tr>
+<tr>
+<td><strong>Monitor traffic</strong></td>
+<td>Detect issues early</td>
+<td>Check <code>http://localhost:4040</code></td>
+</tr>
+<tr>
+<td><strong>Use HTTPS only</strong></td>
+<td>Encrypt data in transit</td>
+<td>ngrok provides HTTPS by default</td>
+</tr>
+<tr>
+<td><strong>Rotate tokens</strong></td>
+<td>Prevent account compromise</td>
+<td>Change monthly</td>
+</tr>
+<tr>
+<td><strong>Stop when done</strong></td>
+<td>Prevent unintended access</td>
+<td>Ctrl+C to stop tunnel</td>
+</tr>
+<tr>
+<td><strong>Test before sharing</strong></td>
+<td>Verify API works</td>
+<td>Test locally first, then through tunnel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="connection-refused">Connection Refused</h3>
+<pre><code class="language-powershell"># Verify API is running
+Get-Process | Where-Object {$_.Name -like &quot;*dotnet*&quot;}
+
+# Check port is listening
+netstat -ano | Select-String 5000
+</code></pre>
+<h3 id="tunnel-wont-start">Tunnel Won't Start</h3>
+<pre><code class="language-powershell"># Check authentication
+ngrok config list
+
+# Verify auth token
+ngrok config add-authtoken &lt;your-new-token&gt;
+</code></pre>
+<h3 id="external-access-fails">External Access Fails</h3>
+<ol>
+<li>Verify tunnel started successfully</li>
+<li>Check ngrok dashboard: <code>http://localhost:4040</code></li>
+<li>Test with curl:
+   <code>powershell
+   curl -v https://your-tunnel-url/api/test</code></li>
+<li>Check API logs for errors</li>
+</ol>
+<h3 id="slow-response-times">Slow Response Times</h3>
+<ul>
+<li>Check network latency</li>
+<li>Try different region: <code>ngrok http 8080 --region=eu</code></li>
+<li>Monitor via dashboard</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../../../use-cases/publish-local-api-for-testing/">Publish Local API for Testing</a></li>
+<li><a href="./setup-dev-tunnels.md">Setup Dev Tunnels</a></li>
+</ul>
 
 
 
