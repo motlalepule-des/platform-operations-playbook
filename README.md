@@ -250,7 +250,7 @@ This command will:
 - Create/update the `gh-pages` branch
 - Push to GitHub automatically
 
-Your documentation will be available at: `https://<username>.github.io/<repository-name>/`
+Your documentation will be available at: `https://<username>.github.io/<repository-name>/` or `https://motlalepule-des.github.io/platform-operations-playbook/`
 
 3. **Optional - Automate with GitHub Actions**:
 
