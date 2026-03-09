@@ -1,0 +1,39 @@
+site_name: Platform Runbooks
+site_description: Engineering runbooks and infrastructure documentation
+site_author: Engineering Team
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Home: index.md
+
+  - Use Cases:
+      - Connect PowerBI to SQL Server: use-cases/connect-powerbi-to-onprem-sql.md
+      - External SQL Data Sync: use-cases/allow-external-data-sync-to-sql-server.md
+
+  - Infrastructure:
+      - SQL Server:
+          - Enable TCP/IP: infrastructure/sql-server/enable-tcp-ip.md
+          - Allow Remote Connections: infrastructure/sql-server/allow-remote-connections.md
+      - Networking:
+          - Port Forwarding: infrastructure/networking/port-forwarding.md
+          - Firewall Whitelisting: infrastructure/networking/firewall-whitelisting.md
+
+  - Data Platform:
+      - Power BI:
+          - Install Gateway: data-platform/powerbi/install-powerbi-gateway.md
+          - Configure Gateway: data-platform/powerbi/configure-powerbi-sql-server-gateway.md
+
+  - Troubleshooting:
+      - SQL Timeout: troubleshooting/sql-server-connection-timeout.md
+      - TcpTestSucceeded False: troubleshooting/tcp-test-succeeded-false.md
+
+  - Tools:
+      - ngrok Setup: tools/ngrok/setup-ngrok-http-tunnel.md
+      - Dev Tunnels: tools/dev-tunnels/setup-dev-tunnels.md

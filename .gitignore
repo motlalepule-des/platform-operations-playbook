@@ -1,0 +1,14 @@
+
+# Strong recommendation
+
+Also add this file at repo root:
+
+## `.gitignore`
+
+```gitignore
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.log
