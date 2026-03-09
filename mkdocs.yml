@@ -16,6 +16,9 @@ nav:
   - Use Cases:
       - Connect PowerBI to SQL Server: use-cases/connect-powerbi-to-onprem-sql.md
       - External SQL Data Sync: use-cases/allow-external-data-sync-to-sql-server.md
+      - Expose SQL Server from Private Network: use-cases/expose-sql-server-from-private-network.md
+      - Publish Local API for Testing: use-cases/publish-local-api-for-testing.md
+      - Troubleshoot Remote SQL Connection: use-cases/troubleshoot-remote-sql-connection.md
 
   - Infrastructure:
       - SQL Server:
