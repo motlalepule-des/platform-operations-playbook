@@ -968,6 +968,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configure-an-on-premises-gateway-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure an On-Premises Gateway Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure an On-Premises Gateway Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-node-to-an-existing-gateway-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a Node to an Existing Gateway Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-the-cluster-in-power-bi-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify the Cluster in Power BI Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Load Balancing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-data-source-on-the-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure a Data Source on the Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-take-a-node-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance: Take a Node Offline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-cluster-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Cluster Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1307,6 +1401,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configure-an-on-premises-gateway-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure an On-Premises Gateway Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure an On-Premises Gateway Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-node-to-an-existing-gateway-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a Node to an Existing Gateway Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-the-cluster-in-power-bi-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify the Cluster in Power BI Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Load Balancing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-data-source-on-the-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure a Data Source on the Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-take-a-node-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance: Take a Node Offline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-cluster-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Cluster Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1351,6 +1539,99 @@
 <p>The gateway machine must be able to reach SQL Server on the network.</p>
 <h2 id="verification">Verification</h2>
 <p>Run a dataset refresh from Power BI Service.</p>
+<hr />
+<h2 id="configure-an-on-premises-gateway-cluster">Configure an On-Premises Gateway Cluster</h2>
+<p>A <strong>gateway cluster</strong> groups multiple gateway instances together for high availability and load balancing. If one gateway node goes down, Power BI fails over to another node automatically.</p>
+<h3 id="requirements_1">Requirements</h3>
+<ul>
+<li>At least two machines with the on-premises data gateway installed</li>
+<li>All nodes must be able to reach the same data sources</li>
+<li>All nodes registered to the same Microsoft 365 / Power BI tenant</li>
+<li>Gateway version must be the same (or compatible) across all nodes</li>
+</ul>
+<h3 id="add-a-node-to-an-existing-gateway-cluster">Add a Node to an Existing Gateway Cluster</h3>
+<ol>
+<li>On the <strong>second machine</strong>, open the <strong>On-premises data gateway</strong> app after installation.</li>
+<li>Sign in with the <strong>same account</strong> used for the primary gateway.</li>
+<li>On the setup screen, select <strong>Add to an existing gateway cluster</strong>.</li>
+<li>From the drop-down list, select the <strong>primary gateway cluster</strong> to join.</li>
+<li>Enter the <strong>recovery key</strong> that was set when the primary gateway was created.</li>
+<li>Click <strong>Configure</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> The recovery key is set during the initial gateway installation. If you did not save it, you must reset the primary gateway before adding a new node.</p>
+</blockquote>
+<h3 id="verify-the-cluster-in-power-bi-service">Verify the Cluster in Power BI Service</h3>
+<ol>
+<li>Open <strong>Power BI Service</strong>.</li>
+<li>Go to <strong>Settings → Manage connections and gateways</strong>.</li>
+<li>Under <strong>On-premises data gateways</strong>, locate your gateway cluster.</li>
+<li>Expand the cluster to confirm all nodes appear with status <strong>Online</strong>.</li>
+</ol>
+<h3 id="configure-load-balancing">Configure Load Balancing</h3>
+<p>By default, Power BI distributes requests across all online nodes randomly. To change the load balancing mode:</p>
+<ol>
+<li>In <strong>Manage connections and gateways</strong>, select the gateway cluster.</li>
+<li>Click the <strong>three-dot menu (…)</strong> → <strong>Settings</strong>.</li>
+<li>Under <strong>Load balance requests across all active gateways in this cluster</strong>, choose:</li>
+<li><strong>Random</strong> — requests are distributed equally at random (default)</li>
+<li><strong>Performance optimized</strong> — Power BI routes requests to the node that responded fastest recently</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3 id="configure-a-data-source-on-the-cluster">Configure a Data Source on the Cluster</h3>
+<p>Data sources are shared across all nodes in the cluster. You only need to configure them once:</p>
+<ol>
+<li>In <strong>Manage connections and gateways</strong>, select the gateway cluster.</li>
+<li>Click <strong>New connection</strong>.</li>
+<li>Choose <strong>SQL Server</strong> as the connection type.</li>
+<li>Enter:</li>
+<li><strong>Server name</strong> — hostname or IP of the SQL Server</li>
+<li><strong>Database name</strong></li>
+<li><strong>Authentication</strong> — Windows or Basic</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<p>All nodes in the cluster will use this connection definition automatically.</p>
+<h3 id="maintenance-take-a-node-offline">Maintenance: Take a Node Offline</h3>
+<p>To update or restart a single node without interrupting service:</p>
+<ol>
+<li>In <strong>Manage connections and gateways</strong>, expand the cluster.</li>
+<li>Select the specific node and click <strong>Disable</strong>.</li>
+<li>Perform maintenance on that machine.</li>
+<li>Restart the gateway service on the machine: open the gateway app and confirm it shows <strong>Online</strong>.</li>
+<li>Re-enable the node in Power BI Service.</li>
+</ol>
+<h3 id="troubleshooting-cluster-nodes">Troubleshooting Cluster Nodes</h3>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node shows <strong>Offline</strong></td>
+<td>Gateway service stopped</td>
+<td>Restart the on-premises data gateway service on that machine</td>
+</tr>
+<tr>
+<td>Node not visible after adding</td>
+<td>Wrong recovery key or account</td>
+<td>Delete the gateway entry and re-add with correct credentials</td>
+</tr>
+<tr>
+<td>All refreshes fail</td>
+<td>All cluster nodes offline</td>
+<td>Check network connectivity and gateway service on each node</td>
+</tr>
+<tr>
+<td>Node added but not joining cluster</td>
+<td>Version mismatch</td>
+<td>Update gateway to the same version on all nodes</td>
+</tr>
+</tbody>
+</table>
 
 
 
