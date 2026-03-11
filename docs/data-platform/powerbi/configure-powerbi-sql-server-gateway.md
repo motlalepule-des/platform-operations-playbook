@@ -51,9 +51,6 @@ Trigger a manual dataset refresh from Power BI Service and confirm it completes 
 
 ---
 
-## Option B: Gateway Cluster (High Availability)
-
----
 
 ## Option B: Gateway Cluster (High Availability)
 
