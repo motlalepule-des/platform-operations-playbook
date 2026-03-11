@@ -40,10 +40,13 @@ During initial gateway setup, when prompted:
 
 ### Map a Dataset to the Data Source
 
-1. Open the dataset in Power BI Service.
-2. Go to **Settings → Gateway connection**.
-3. Select the standalone gateway and the data source you just created.
-4. Click **Apply**.
+1. In Power BI Service, navigate to the **workspace** that contains your dataset (semantic model).
+2. Hover over the dataset, click the **three-dot menu (…)** → **Settings**.
+3. Expand the **Gateway and cloud connections** section.
+4. Under **Maps to**, use the drop-down next to each data source to select the matching connection you created on your gateway.
+5. Click **Apply**.
+
+> If the drop-down shows **No gateway** or your gateway does not appear, make sure the gateway is **Online** in **Manage connections and gateways** and that the data source server/database name matches exactly what is in the dataset.
 
 ### Verify
 
