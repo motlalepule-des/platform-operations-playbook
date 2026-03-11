@@ -64,7 +64,7 @@ Forwarding              https://abcd-1234-5678.ngrok.io -> http://localhost:5000
 
 Your API is now accessible at: `https://abcd-1234-5678.ngrok.io`
 
-For detailed information about the `--host-header=rewrite` flag and other ngrok options, see [Setup ngrok HTTP Tunnel](../../tools/ngrok/setup-ngrok-http-tunnel.md).
+For detailed information about the `--host-header=rewrite` flag and other ngrok options, see [Setup ngrok HTTP Tunnel](../tools/ngrok/setup-ngrok-http-tunnel.md).
 
 ### 5. Share Public URL
 

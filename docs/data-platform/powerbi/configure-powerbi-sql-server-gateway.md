@@ -3,33 +3,59 @@
 ## Purpose
 Connect Power BI Service to a SQL Server source through the gateway.
 
-## Requirements
-- Gateway installed and online
-- SQL Server reachable from gateway machine
+---
+
+## Option A: Standalone Gateway (No Cluster)
+
+Use this option when you have a single gateway machine and do not need high availability or load balancing.
+
+### Requirements
+- Gateway installed and online (see [Install Power BI Gateway](install-powerbi-gateway.md))
+- SQL Server reachable from the gateway machine
 - Database credentials available
 
-## Steps
-1. Open **Power BI Service**
-2. Go to **Manage Connections and Gateways**
-3. Select the gateway
-4. Add a new data source
-5. Choose **SQL Server**
+### Install as a Standalone Gateway
+
+During initial gateway setup, when prompted:
+
+1. Select **Register a new gateway on this computer**.
+2. Enter a **gateway name** (unique within your tenant).
+3. Set a **recovery key** and store it securely — you will need it to restore or migrate the gateway later.
+4. Click **Configure**.
+
+> Do **not** select "Add to an existing gateway cluster" — that option is for joining a cluster.
+
+### Add a SQL Server Data Source
+
+1. Open **Power BI Service**.
+2. Go to **Settings → Manage connections and gateways**.
+3. Select your standalone gateway.
+4. Click **New connection**.
+5. Choose **SQL Server**.
 6. Enter:
-   - Server name
-   - Database name
-   - Authentication method
-7. Save
-8. Map dataset to the configured data source
+   - **Server name** — hostname or IP of the SQL Server
+   - **Database name**
+   - **Authentication** — Windows or Basic (username/password)
+7. Click **Create**.
 
-## Important
-The gateway machine must be able to reach SQL Server on the network.
+### Map a Dataset to the Data Source
 
-## Verification
-Run a dataset refresh from Power BI Service.
+1. Open the dataset in Power BI Service.
+2. Go to **Settings → Gateway connection**.
+3. Select the standalone gateway and the data source you just created.
+4. Click **Apply**.
+
+### Verify
+
+Trigger a manual dataset refresh from Power BI Service and confirm it completes without errors.
 
 ---
 
-## Configure an On-Premises Gateway Cluster
+## Option B: Gateway Cluster (High Availability)
+
+---
+
+## Option B: Gateway Cluster (High Availability)
 
 A **gateway cluster** groups multiple gateway instances together for high availability and load balancing. If one gateway node goes down, Power BI fails over to another node automatically.
 
