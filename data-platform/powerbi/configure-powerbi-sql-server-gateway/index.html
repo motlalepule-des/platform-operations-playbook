@@ -1606,11 +1606,15 @@
 </ol>
 <h3 id="map-a-dataset-to-the-data-source">Map a Dataset to the Data Source</h3>
 <ol>
-<li>Open the dataset in Power BI Service.</li>
-<li>Go to <strong>Settings → Gateway connection</strong>.</li>
-<li>Select the standalone gateway and the data source you just created.</li>
+<li>In Power BI Service, navigate to the <strong>workspace</strong> that contains your dataset (semantic model).</li>
+<li>Hover over the dataset, click the <strong>three-dot menu (…)</strong> → <strong>Settings</strong>.</li>
+<li>Expand the <strong>Gateway and cloud connections</strong> section.</li>
+<li>Under <strong>Maps to</strong>, use the drop-down next to each data source to select the matching connection you created on your gateway.</li>
 <li>Click <strong>Apply</strong>.</li>
 </ol>
+<blockquote>
+<p>If the drop-down shows <strong>No gateway</strong> or your gateway does not appear, make sure the gateway is <strong>Online</strong> in <strong>Manage connections and gateways</strong> and that the data source server/database name matches exactly what is in the dataset.</p>
+</blockquote>
 <h3 id="verify">Verify</h3>
 <p>Trigger a manual dataset refresh from Power BI Service and confirm it completes without errors.</p>
 <hr />
